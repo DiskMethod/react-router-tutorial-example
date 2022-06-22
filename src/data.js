@@ -34,3 +34,7 @@ let invoices = [
 export const getInvoices = () => {
   return invoices;
 };
+
+export const getInvoice = (number) => {
+  return invoices.find((invoice) => invoice.number === number);
+};

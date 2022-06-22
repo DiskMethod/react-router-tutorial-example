@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 import { getInvoices } from "../data";
 
@@ -7,7 +7,11 @@ const Invoices = () => {
   const invoices = getInvoices();
 
   return (
-    <div style={{ display: "flex" }}>
+    <div
+      style={{
+        display: "flex",
+      }}
+    >
       <nav
         style={{
           borderRight: "solid 1px",
@@ -22,6 +26,7 @@ const Invoices = () => {
           );
         })}
       </nav>
+      <Outlet />
     </div>
   );
 };
